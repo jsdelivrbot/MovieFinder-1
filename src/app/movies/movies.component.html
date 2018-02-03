@@ -1,0 +1,104 @@
+<div>
+    <div class="container">
+        <h1>Find A Movie</h1>
+        <p>Search for a movie using the form below</p>    
+        <form (submit)="searchMovies()">
+            <input type="text" class="form-control" [(ngModel)]="searchStr" name="searchStr">   
+            <br>
+            <button class="btn btn-primary btn-lg">Find</button>
+         </form>
+    </div>    
+</div>
+
+<div *ngIf="searchRes">
+    <div class="panel-heading">
+        <h3 class="panel-title">Search Results</h3>    
+    </div> 
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let movie of searchRes;let i=index" class="col-md-3">
+                <div *ngIf="i < 12">
+                    <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    <h4>{{movie.title}}</h4>  
+                    <p>{{movie.release_date}}</p>  
+                <!-- <p><a class="btn btn-success" routerLink="movie/{{movie.id}}">View Details</a></p>-->
+                </div>
+            </div>    
+        </div>    
+    </div>   
+</div>
+
+<div>
+    <div>
+        <h1>Kids Movies</h1>    
+    </div> 
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let movie of kidsList;let i=index" class="col-md-3">
+                <div *ngIf="i < 16">
+                    <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    <h4>{{movie.title}}</h4>  
+                    <p>{{movie.release_date}}</p>  
+                    <p><a class="btn btn-success" routerLink="movie/{{movie.id}}">View Details</a></p>
+                </div>
+            </div>    
+        </div>    
+    </div>   
+</div>
+
+<div>
+    <div>
+        <h1>Movies in Theaters</h1>    
+    </div> 
+    <div>
+        <div class="row">
+            <div *ngFor="let movie of theatersList;let i=index" class="col-md-4">
+                <div *ngIf="i < 6">
+                    <img *ngIf="movie.poster_path" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}} ">
+                    <h4>{{movie.title}}</h4>  
+                    <p>{{movie.release_date}}</p> 
+                    <p>Rating:{{movie.vote_average}}</p>
+                    <p><a class="btn btn-success" routerLink="movie/{{movie.id}}">View Details</a></p>
+                </div>
+            </div>    
+        </div>    
+    </div>   
+</div>
+
+<div>
+    <div>
+        <h1>Recommended Movies</h1>    
+    </div> 
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let movie of popularList;let i=index" class="col-md-3">
+                <div *ngIf="i < 4">
+                    <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    <h4>{{movie.title}}</h4>  
+                    <p>{{movie.release_date}}</p>  
+                     <p><a class="btn btn-success" routerLink="movie/{{movie.id}}">View Details</a></p>
+                </div>
+            </div>    
+        </div>    
+    </div>   
+</div>
+
+
+
+<div>
+    <div>
+        <h1>Best Dramas</h1>    
+    </div> 
+    <div class="panel-body">
+        <div class="row">
+            <div *ngFor="let movie of dramaList;let i=index" class="col-md-3">
+                <div *ngIf="i < 4">
+                    <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}">
+                    <h4>{{movie.title}}</h4>  
+                    <p>{{movie.release_date}}</p>  
+                </div>
+            </div>    
+        </div>    
+    </div>   
+</div>
+

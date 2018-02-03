@@ -1,0 +1,14 @@
+1.设置环境太耗时间了 所以直接用设置好的lab4删除重做。
+2. 网站细节
+    【】首页拥有搜索功能，输入可以搜索出12个结果
+    【】首页拥有显示正在上映(In theaters)，显示8个结果。
+    【】首页拥有显示推荐电影(Recommendered) ，显示4个结果
+    【】首页拥有最佳儿童动画 ，显示16个结果
+    【】首页拥有显示推荐drama(Recommendered) ，显示4个结果
+    【】点击view details 可以看到每个movie的细节
+
+3. 需要改进的部分
+    【】网站UI设计（design）与优化（optimize）
+    【】Google map地图所有必须文件已设置好，无奈无法显示地图 需要改进（）
+        文档在 https://angular-maps.com/guides/getting-started/
+    【】如果完成了可以直接扔到AWS
